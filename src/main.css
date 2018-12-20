@@ -1,0 +1,280 @@
+* {
+  box-sizing: border-box;
+}
+
+.sheridan__media {
+  background: url(./assets/Background.jpg);
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+}
+
+.sheridan__media--head {
+  padding: 25px;
+  display: flex;
+}
+
+.sheridan__media--nav {
+  width: 100%;
+}
+
+.sheridan__media--nav ul.main__nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  justify-content: center;
+}
+
+
+
+.sheridan__media li {
+  padding: 5px 20px;
+}
+
+.sheridan__media ul a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sheridan__media ul a:hover {
+  color: #2c99ed;
+}
+
+.sheridan__media--nav__mobile {
+  display: inline-block;
+  cursor: pointer;
+  float: right;
+  position: relative;
+}
+
+.sheridan__media--nav__mobile ul {
+  padding: 0;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  list-style: none;
+  display: none;
+  background-color: #333;
+  padding: 15px;
+}
+
+.sheridan__media--nav__mobile.change ul {
+  display: block;
+}
+
+.sheridan__media--nav__mobile li {
+  padding: 5px;
+}
+
+.sheridan__media--wrap {
+  clear: both;
+  width: 100%;
+  display: inline-block;
+  padding: 30px 0;
+}
+
+.show__tablet__up {
+  display: none;
+}
+
+.sheridan__media--container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.sheridan__media--container h1 {
+  font-size: 1.6rem;
+}
+
+.sheridan__media--container h3 {
+  text-align: center;
+}
+
+.sheridan__media--container p {
+  font-size: 22px;
+}
+
+.sheridan__media--container p.small {
+  font-size: 14px;
+  text-align: center;
+}
+
+.sheridan__media--form {
+  border: 2px solid #fff;
+  border-radius: 4px;
+}
+
+.sheridan__media--form input {
+  width: 100%;
+  font-size: 18px;
+  padding: 15px;
+  background-color: transparent;
+  border-width: 0;
+  color: #fff;
+}
+
+.sheridan__media--form input::placeholder {
+  color: #fff;
+}
+
+.sheridan__media--form input:focus {
+  outline: none;
+}
+
+.sheridan__media--form input[type=email] {
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+
+.sheridan__media--form button {
+  width: 100%;
+  font-size: 18px;
+  padding: 15px;
+  background-color: #2c99ed;
+  color: #fff;
+  border-width: 0;
+  cursor: pointer;
+}
+
+.sheridan__media--form button:hover {
+  background-color: #fff;
+  color: #2c99ed;
+}
+
+.sheridan__media--footer {
+  padding: 25px;
+  clear: both;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+}
+
+.sheridan__media--footer ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 6px 0 0;
+  font-size: 20px;
+  justify-content: flex-end;
+}
+
+.sheridan__media--footer a {
+  font-size: 14px;
+}
+
+[class*="bar-"] {
+  width: 35px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar-1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar-2 {
+  opacity: 0;
+}
+
+.change .bar-3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+/* Grid */
+.col-2 {
+  width: 16.66%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  .sheridan__media--wrap {
+    text-align: center;
+    padding: 0;
+  }
+
+  .sheridan__media--footer ul {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  [class*="col-"] {
+    width: 100%;
+  }
+
+  .sheridan__media {
+    background-attachment: fixed;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .sheridan__media .col-sm-6 {
+    width: 50%;
+  }
+
+  .sheridan__media--footer>div {
+    width: 100%;
+    text-align: center;
+  }
+
+  .sheridan__media--footer .nav {
+    padding-bottom: 60px;
+  }
+
+  .sheridan__media--footer .copyright {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+  }
+
+  .sheridan__media--footer ul {
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 902px) {
+  .sheridan__media .show__tablet__up {
+    display: block;
+  }
+
+  .sheridan__media--wrap {
+    padding: 60px 0;
+  }
+
+  .sheridan__media--container h1 {
+    font-size: 3rem;
+  }
+
+  .sheridan__media--footer {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .sheridan__media--container h1 {
+    font-size: 4rem;
+  }
+}
